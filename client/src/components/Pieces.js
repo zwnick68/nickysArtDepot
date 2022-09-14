@@ -2,9 +2,9 @@ import React from "react"
 
 const Pieces = () => {
     return (
-        <>
-        <h1>cum</h1>
-        </>
+        <div>
+            oi display something dickhead
+        </div>
     )
 }
 

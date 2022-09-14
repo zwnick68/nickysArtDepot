@@ -8,14 +8,14 @@ import NavBar from './components/NavBar';
 
 const App = () => {
   return (
-    <>
+    <div>
         <NavBar/>
           <Routes>
-            <Route path = '/' exact component={Pieces} />
-            <Route path = '/artists' exact component={Artists} />
-            <Route path = '/movements' exact component={Movements} />
+            <Route path = '/' element={<Pieces/>} />
+            <Route path = '/artists' element={<Artists/>} />
+            <Route path = '/movements' element={<Movements/>} />
           </Routes>
-    </>
+    </div>
   );
 }
 
