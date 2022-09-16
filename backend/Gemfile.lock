@@ -230,7 +230,7 @@ DEPENDENCIES
   importmap-rails
   jbuilder
   jsonapi-serializer (~> 2.2)
-  nokogiri (~> 1.13, >= 1.13.6)
+  nokogiri (~> 1.13, >= 1.13.8)
   puma (~> 5.0)
   racc (~> 1.6)
   rack-cors (~> 1.1, >= 1.1.1)
@@ -239,6 +239,7 @@ DEPENDENCIES
   sprockets-rails
   sqlite3 (~> 1.4.4)
   stimulus-rails
+  strscan (~> 3.0, >= 3.0.4)
   timeout (~> 0.3.0)
   turbo-rails
   tzinfo-data (~> 1.2022, >= 1.2022.1)
