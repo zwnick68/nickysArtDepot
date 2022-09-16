@@ -5,8 +5,10 @@ import Pieces from './components/Pieces';
 import Artists from './components/Artists';
 import Movements from './components/Movements';
 import NavBar from './components/NavBar';
+import {useState} from 'react'
 
 const App = () => {
+
   return (
     <div>
         <NavBar/>
