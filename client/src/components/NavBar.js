@@ -1,11 +1,33 @@
+
 import React from 'react'
-import { Router } from 'react-router'
 import { NavLink } from 'react-router-dom'
+import {useState, useEffect} from 'react'
 
 const NavBar = () => {
+
+const [art,setArt] = useState([])
+
+  const fetchData = () =>  {
+
+    try {
+        (
+          async() => {
+            let req = await fetch('http://127.0.0.1:3000/pieces')
+            let res = await req.json()
+            setArt(res)
+        })()  }
+        catch (error) {
+            console.log(error)
+        }
+       }
+
+    useEffect(()=> {
+      fetchData()
+    },[])
+
     return (
         <div>
-        <NavLink to="/">Pieces</NavLink>
+        <NavLink to="/" state={art}>Pieces</NavLink>
         <NavLink to="/artists">Artists</NavLink>
         <NavLink to="/movements">Movements</NavLink>
         </div>

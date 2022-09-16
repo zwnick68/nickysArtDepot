@@ -1,0 +1,16 @@
+current directory: /home/zwnick68/Development/postGrad/nickysArtDepot/backend/vendor/cache/ruby/2.7.0/gems/strscan-3.0.4/ext/strscan
+/home/zwnick68/.rbenv/versions/2.7.0/bin/ruby -I /home/zwnick68/.rbenv/versions/2.7.0/lib/ruby/2.7.0 -r ./siteconf20220915-27991-1mmny3y.rb extconf.rb
+checking for onig_region_memsize() in ruby.h... yes
+creating Makefile
+
+current directory: /home/zwnick68/Development/postGrad/nickysArtDepot/backend/vendor/cache/ruby/2.7.0/gems/strscan-3.0.4/ext/strscan
+make "DESTDIR=" clean
+
+current directory: /home/zwnick68/Development/postGrad/nickysArtDepot/backend/vendor/cache/ruby/2.7.0/gems/strscan-3.0.4/ext/strscan
+make "DESTDIR="
+compiling strscan.c
+linking shared-object strscan.so
+
+current directory: /home/zwnick68/Development/postGrad/nickysArtDepot/backend/vendor/cache/ruby/2.7.0/gems/strscan-3.0.4/ext/strscan
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 strscan.so ./.gem.20220915-27991-s9brzo
