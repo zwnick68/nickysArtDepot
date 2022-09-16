@@ -130,7 +130,9 @@ GEM
       net-protocol
       timeout
     nio4r (2.5.8)
-    nokogiri (1.13.6-x64-mingw-ucrt)
+    nokogiri (1.13.6-x64-unknown)
+      racc (~> 1.4)
+    nokogiri (1.13.6-x86_64-linux)
       racc (~> 1.4)
     public_suffix (4.0.7)
     puma (5.6.4)
@@ -215,7 +217,9 @@ GEM
     zeitwerk (2.6.0)
 
 PLATFORMS
-  x64-mingw-ucrt
+  ruby
+  x64-unknown
+  x86_64-linux
 
 DEPENDENCIES
   bootsnap
@@ -236,7 +240,7 @@ DEPENDENCIES
   webdrivers
 
 RUBY VERSION
-   ruby 3.1.2p20
+   ruby 2.7.0p0
 
 BUNDLED WITH
    2.3.7
