@@ -12,7 +12,7 @@ const [art,setArt] = useState([])
     try {
         (
           async() => {
-            let req = await fetch('http://127.0.0.1:3000/pieces')
+            let req = await fetch('http://127.0.0.1:8000/pieces')
             let res = await req.json()
             setArt(res)
         })()  }
@@ -24,7 +24,7 @@ const [art,setArt] = useState([])
     useEffect(()=> {
       fetchData()
     },[])
-
+    console.log(art)
     return (
         <div>
         <NavLink to="/" state={art}>Pieces</NavLink>
