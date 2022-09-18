@@ -1,11 +1,11 @@
 
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink , Link} from 'react-router-dom'
 import {useState, useEffect} from 'react'
 
 const NavBar = () => {
 
-const [art,setArt] = useState([])
+const [art,setArt] = useState()
 
   const fetchData = () =>  {
 
@@ -27,8 +27,8 @@ const [art,setArt] = useState([])
     console.log(art)
     return (
         <div>
-        <NavLink to="/" state={art}>Pieces</NavLink>
-        <NavLink to="/artists">Artists</NavLink>
+        <Link to="/pieces" state={art}>Pieces</Link>
+        <Link to="/artists" state={{test : 'test'}}>Artists</Link>
         <NavLink to="/movements">Movements</NavLink>
         </div>
     )
