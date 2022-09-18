@@ -27,6 +27,7 @@ const [art,setArt] = useState()
     console.log(art)
     return (
         <div>
+        <Link to="/">Home</Link>
         <Link to="/pieces" state={art}>Pieces</Link>
         <Link to="/artists" state={{test : 'test'}}>Artists</Link>
         <NavLink to="/movements">Movements</NavLink>

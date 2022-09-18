@@ -6,7 +6,7 @@ import Pieces from './components/Pieces';
 import Artists from './components/Artists';
 import Movements from './components/Movements';
 import NavBar from './components/NavBar';
-import {useState} from 'react'
+import Home from './components/Home'
 
 const App = () => {
 
@@ -14,6 +14,7 @@ const App = () => {
     <div>
         <NavBar/>
           <Routes>
+            <Route path = '/' element={<Home/>} />
             <Route path = '/pieces' element={<Pieces/>} />
             <Route path = '/artists' element={<Artists/>} />
             <Route path = '/movements' element={<Movements/>} />
