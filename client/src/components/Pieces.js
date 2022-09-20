@@ -5,12 +5,12 @@ const Pieces = () => {
 
     const location = useLocation()
     const data = location.state
-    console.log(data.data[0].attributes.name)
+    console.log(data.data[0])
 
     return (
         <div>
             <h1>{data.data[0].attributes.name}</h1>
-            <img src ={data.data[0].attributes.img}></img>
+            <img alt= "boi" src ={data.data[0].attributes.img}></img>
         </div>
     )
 }
