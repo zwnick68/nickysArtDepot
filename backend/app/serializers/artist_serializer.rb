@@ -1,8 +1,8 @@
 class ArtistSerializer
   include JSONAPI::Serializer
-  attributes :name, :birthday, :deathday, :birthplace, :bio
+  attributes :name, :birthday, :deathday, :birthplace, :bio, :pieces, :movement
   
-  has_many :pieces
+  # has_many :pieces
   
-  belongs_to :movement
+  # belongs_to :movement
 end

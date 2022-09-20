@@ -1,6 +1,6 @@
 class PiecesController < ApplicationController
     def index
-        render json: PieceSerializer.new(Piece.all, include: [:artist, :movement]).serializable_hash.to_json 
+        render json: PieceSerializer.new(Piece.all).serializable_hash.to_json 
     end
 
     def create

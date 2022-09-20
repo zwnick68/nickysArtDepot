@@ -9,9 +9,12 @@ import { useState } from "react"
 
         const [form,setForm] = useState({
             name: '', 
-            medium: '', 
             img: '', 
-            year: 0
+            year: 0,
+            artist_id: 0, 
+            movement_id: 0, 
+            medium_id: 0
+
     })
     return (
         <div>
@@ -29,12 +32,12 @@ import { useState } from "react"
             
             <div>
             
-                <input className="input" type="text" name="name" placeholder="Name" onChange={(e)=>{setForm({...form, name: e.target.value})}}/>
-                <input className="input" type="text" name="medium" placeholder="medium" onChange={(e)=>{setForm({...form, medium: e.target.value})}}/>
+                <input className="input" type="text" name="name" placeholder="name" onChange={(e)=>{setForm({...form, name: e.target.value})}}/>
+                <input className="input" type="text" name="medium" placeholder="image" onChange={(e)=>{setForm({...form, img: e.target.value})}}/>
                 <input className="input" type="text" name="image" placeholder="year" onChange={(e)=>{setForm({...form, year: e.target.value})}}/>
-                <input className="input" type="text" name="artist" placeholder="artist" onChange={(e)=>{setForm({...form, artist: e.target.value})}}/>
-                <input className="input" type="text" name="movement" placeholder="movement" onChange={(e)=>{setForm({...form, movement: e.target.value})}}/>
-                <input className="input" type="text" name="year" placeholder="image" onChange={(e)=>{setForm({...form, image: e.target.value})}}/>
+                <input className="input" type="text" name="artist" placeholder="artist_id" onChange={(e)=>{setForm({...form, artist_id: e.target.value})}}/>
+                <input className="input" type="text" name="movement" placeholder="movement_id" onChange={(e)=>{setForm({...form, movement_id: e.target.value})}}/>
+                <input className="input" type="text" name="year" placeholder="medium_id" onChange={(e)=>{setForm({...form, medium_id: e.target.value})}}/>
 
             </div>
                 <button className="button" type="submit">Upload</button>
