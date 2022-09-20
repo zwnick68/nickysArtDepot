@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_07_06_201845) do
+ActiveRecord::Schema[7.0].define(version: 2022_09_20_022911) do
   create_table "artists", force: :cascade do |t|
     t.string "name"
     t.string "birthday"
@@ -18,6 +18,12 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_06_201845) do
     t.string "birthplace"
     t.integer "movement_id"
     t.text "bio"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "media", force: :cascade do |t|
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -32,7 +38,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_06_201845) do
 
   create_table "pieces", force: :cascade do |t|
     t.string "name"
-    t.string "medium"
     t.string "img"
     t.integer "year"
     t.integer "artist_id"
