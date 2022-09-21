@@ -1,16 +1,16 @@
 import React from "react"
 import { useLocation } from "react-router-dom";
 import Pieces from "./Pieces";
-const PiecesContainer = () => {
+const PiecesContainer = ({art}) => {
 
-    const location = useLocation()
-    const data = location.state
-    console.log(data.data[0])
-
+    // const location = useLocation()
+    // const data = location.state
+    // console.log(data.data[0])
+    console.log(art)
     return (
         <div>
             {
-                data.data.map((element) => {
+                art.data.map((element) => {
                     return  <Pieces art = {element}/>
                 })
             }
