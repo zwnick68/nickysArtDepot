@@ -12,12 +12,12 @@ import { useLocation } from "react-router-dom";
         const toggleSubmit = () => {setSubmitModalVisible(!submitModalVisible)}
 
         const [form,setForm] = useState({
-            name: '', 
-            img: '', 
+            name: '',  
             year: 0,
             artist_id: 0, 
             movement_id: 0, 
-            medium_id: 0
+            medium_id: 0,
+            img: null
 
     })
     return (
@@ -29,8 +29,8 @@ import { useLocation } from "react-router-dom";
                     e.preventDefault()
                     let req = await fetch('http://localhost:8000/pieces', {
                         method: 'POST',
-                        headers: {'Content-Type': 'application/json'},
-                        body: JSON.stringify(form)
+                        
+                        body: form
                     })
                     let res = await req.json()
                     // setArt((prevState) => {
@@ -44,12 +44,12 @@ import { useLocation } from "react-router-dom";
             <div>
             
                 <input className="input" type="text" name="name" placeholder="name" onChange={(e)=>{setForm({...form, name: e.target.value})}}/>
-                <input className="input" type="text" name="medium" placeholder="image" onChange={(e)=>{setForm({...form, img: e.target.value})}}/>
+                <input className="input" type="text" name="year" placeholder="year" onChange={(e)=>{setForm({...form, year: e.target.value})}}/>
                 {/* <input className="input" type="text" name="image" placeholder="year" onChange={(e)=>{setForm({...form, year: e.target.value})}}/> */}
                 <input className="input" type="text" name="artist" placeholder="artist_id" onChange={(e)=>{setForm({...form, artist_id: e.target.value})}}/>
                 <input className="input" type="text" name="movement" placeholder="movement_id" onChange={(e)=>{setForm({...form, movement_id: e.target.value})}}/>
-                <input className="input" type="text" name="year" placeholder="medium_id" onChange={(e)=>{setForm({...form, medium_id: e.target.value})}}/>
-                <input className="input" type="file" name="image" placeholder="upload image" />
+                <input className="input" type="text" name="medium" placeholder="medium_id" onChange={(e)=>{setForm({...form, medium_id: e.target.value})}}/>
+                <input className="input" type="file" accept="image/*" multiple={false} name="image" placeholder="upload image" onChange={(e)=>{setForm({...form, img: e.target.files[0]})}}/>
 
             </div>
                 <button className="button" type="submit">Upload</button>

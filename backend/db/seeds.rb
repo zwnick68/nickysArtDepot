@@ -4,7 +4,9 @@ Artist.create(name:"Albert Bierstadt", birthday:"January 7, 1830", birthplace:"S
 Movement.create(name:"Hudson River School", time_period:"mid-19th century", description: "The Hudson River School was a mid-19th century American art movement embodied by a group of landscape painters whose aesthetic vision was influenced by Romanticism. The paintings typically depict the Hudson River Valley and the surrounding area, including the Catskill, Adirondack, and White Mountains. Works by the second generation of artists associated with the school expanded to include other locales in New England, the Maritimes, the American West, and South America.")
 
 
-Piece.create(name:"Among the Sierra Nevada, California", img: "https://upload.wikimedia.org/wikipedia/commons/5/5f/Bierstadt_-_Among_the_Sierra_Nevada_Mountains_-_1868.jpg", year: 1868, movement_id: 1, artist_id: 1, medium_id: 1)
+piece = Piece.create(name:"Among the Sierra Nevada, California", year: 1868, movement_id: 1, artist_id: 1, medium_id: 1)
+piece.img.attach( io: File.open('app/assets/images/among_the_sierra_nevada.jpg'), filename: 'among_the_sierra_nevada.jpg')
+
 
 Medium.create(name: "Oil-on-Canvas")
 

@@ -4,17 +4,17 @@ class PiecesController < ApplicationController
     rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
 
     def index
-        render json: PieceSerializer.new(Piece.all).serializable_hash.to_json 
+        render json: Piece.all, adapter: :json_api
     end
 
     def show
         piece = find_piece
-        render json: piece
+        render json: piece, adapter: :json_api
     end
 
     def create
        piece = Piece.create!(piece_params)
-        render json: PieceSerializer.new(piece).serializable_hash.to_json, status: :created
+        render json: piece, adapter: :json_api
     end
 
     def piece_params

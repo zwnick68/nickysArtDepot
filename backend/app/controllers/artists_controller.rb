@@ -1,6 +1,6 @@
 class ArtistsController < ApplicationController
     def index
         # artists = Artist.all
-        render json: ArtistSerializer.new(Artist.all).serializable_hash.to_json
+        render json: Artist.all, adapter: :json_api
     end
 end

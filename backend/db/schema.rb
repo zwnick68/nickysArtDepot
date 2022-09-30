@@ -66,7 +66,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_29_234304) do
 
   create_table "pieces", force: :cascade do |t|
     t.string "name"
-    t.string "img"
     t.integer "year"
     t.integer "artist_id"
     t.integer "movement_id"

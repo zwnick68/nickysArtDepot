@@ -1,5 +1,3 @@
-class MediumSerializer
-  include JSONAPI::Serializer
-  attributes :name, :pieces
-  # has_many :pieces
+class MediumSerializer < ActiveModel::Serializer
+  attributes :id, :name
 end

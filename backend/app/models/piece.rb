@@ -3,5 +3,5 @@ class Piece < ApplicationRecord
     belongs_to :artist
     belongs_to :medium
 
-    has_one_attached :image
+    has_one_attached :img
 end

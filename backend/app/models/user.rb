@@ -4,11 +4,11 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-         before_action :authenticate_user!
+        #  before_action :authenticate_user!
 
-         user_signed_in?
+        #  user_signed_in?
 
-         current_user
+        #  current_user
 
-         user_session
+        #  user_session
 end
