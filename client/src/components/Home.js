@@ -45,10 +45,11 @@ import { useLocation } from "react-router-dom";
             
                 <input className="input" type="text" name="name" placeholder="name" onChange={(e)=>{setForm({...form, name: e.target.value})}}/>
                 <input className="input" type="text" name="medium" placeholder="image" onChange={(e)=>{setForm({...form, img: e.target.value})}}/>
-                <input className="input" type="text" name="image" placeholder="year" onChange={(e)=>{setForm({...form, year: e.target.value})}}/>
+                {/* <input className="input" type="text" name="image" placeholder="year" onChange={(e)=>{setForm({...form, year: e.target.value})}}/> */}
                 <input className="input" type="text" name="artist" placeholder="artist_id" onChange={(e)=>{setForm({...form, artist_id: e.target.value})}}/>
                 <input className="input" type="text" name="movement" placeholder="movement_id" onChange={(e)=>{setForm({...form, movement_id: e.target.value})}}/>
                 <input className="input" type="text" name="year" placeholder="medium_id" onChange={(e)=>{setForm({...form, medium_id: e.target.value})}}/>
+                <input className="input" type="file" name="image" placeholder="upload image" />
 
             </div>
                 <button className="button" type="submit">Upload</button>

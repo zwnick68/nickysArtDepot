@@ -1,6 +1,17 @@
 .art {
   object-fit: contain;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
   width: 500px;
   height: 500px;
+}
+
+.navbar {
+  /* object-fit: contain; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
