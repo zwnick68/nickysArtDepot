@@ -1,12 +1,7 @@
 
 import React from "react"
 import { useState } from "react"
-import { useLocation } from "react-router-dom";
     const Home = ({refetch,setRefetch,art,setArt}) => {
-
-        const location = useLocation()
-        const data = location.state
-        console.log(location)
 
         const [submitModalVisible, setSubmitModalVisible] = useState(false)
         const toggleSubmit = () => {setSubmitModalVisible(!submitModalVisible)}

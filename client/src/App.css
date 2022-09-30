@@ -1,11 +1,15 @@
-.art {
-  object-fit: contain;
+div.art {
+  /* object-fit: contain; */
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  
-  width: 500px;
-  height: 500px;
+  /* height: 100vh; */
+}
+
+img {
+  /* height: 80%; */
+  width: 99%;
 }
 
 .navbar {
