@@ -8,8 +8,10 @@ div.art {
 }
 
 img {
-  /* height: 80%; */
-  width: 99%;
+  /* object-fit: contain; */
+  /* width: 90vw; */
+  height: 90vh;
+  /* width: 99%; */
 }
 
 .navbar {

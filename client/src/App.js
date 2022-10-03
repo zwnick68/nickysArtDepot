@@ -1,8 +1,7 @@
 
 import './App.css';
 import React from 'react';
-import {Link, Routes, Route, BrowserRouter as Router} from "react-router-dom";
-import Pieces from './components/Pieces';
+import {Link, Routes, Route, BrowserRouter as Router} from "react-router-dom"; 
 import Artists from './components/Artists';
 import Movements from './components/Movements';
 import NavBar from './components/NavBar';
@@ -39,7 +38,7 @@ const App = () => {
         <NavBar/>
           <Routes>
             <Route path = '/' element={<Home refetch={refetch} setRefetch={setRefetch} art={art} setArt={setArt}/>} />
-            <Route path = '/pieces' element={<PiecesContainer art={art}/>} />
+            <Route path = '/pieces' element={<PiecesContainer art={art} refetch={refetch} setRefetch={setRefetch}/>} />
             <Route path = '/artists' element={<Artists/>} />
             <Route path = '/movements' element={<Movements/>} />
           </Routes>
